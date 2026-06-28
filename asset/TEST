@@ -1,0 +1,30 @@
+def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
+    text_font = pygame.font.Font('asset/PixeloidSans-Bold.ttf', text_size)
+
+    shadow_color = (0, 0, 0)
+    outline_color = (60, 20, 90)
+
+    text_surf = text_font.render(text, True, text_color)
+    shadow_surf = text_font.render(text, True, shadow_color)
+    outline_surf = text_font.render(text, True, outline_color)
+
+    x, y = text_center_pos
+
+    self.window.blit(shadow_surf, shadow_surf.get_rect(center=(x + 4, y + 4)))
+
+    for dx, dy in [
+        (-2, 0), (2, 0), (0, -2), (0, 2),
+        (-2, -2), (-2, 2), (2, -2), (2, 2)
+    ]:
+        self.window.blit(outline_surf, outline_surf.get_rect(center=(x + dx, y + dy)))
+
+    self.window.blit(text_surf, text_surf.get_rect(center=(x, y)))
+
+    self.menu_text(80, "fairyfight", COLOR_GOLD, (WIN_WIDTH / 2, 90))
+self.menu_text(80, "Fight", COLOR_GOLD, (WIN_WIDTH / 2, 150))
+
+
+self.window.blit(source=self.surf, dest=self.rect)
+            self.menu_text(80, "Fairy", COLOR_GOLD, ((WIN_WIDTH / 2), 70))
+            self.menu_text(80, "Fight", COLOR_GOLD, ((WIN_WIDTH / 2), 150))
+            pygame.display.flip()
