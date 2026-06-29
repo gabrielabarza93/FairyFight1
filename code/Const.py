@@ -16,10 +16,10 @@ ENTITY_SPEED = {
 }
 
 # M
-MENU_OPTION = ('New Game 1P',
-               'New Game 2P - Cooperative',
-               'New Game 2P - Competitive',
-               'Score',
+MENU_OPTION = ('NEW GAME 1P',
+               'NEW GAME 2P - COOPERATIVE',
+               'NEW GAME 2P - COMPETITIVE',
+               'SCORE',
                'EXIT')
 
 # w
