@@ -124,11 +124,10 @@ class Score:
             text_rect = text_surf.get_rect(midleft=text_pos)
         elif align == 'right':
             text_rect = text_surf.get_rect(midright=text_pos)
-
-        self.window.blit(text_surf, text_rect)
+        self.window.blit(source=text_surf, dest=text_rect)
 
 def get_formatted_date():
     current_datetime = datetime.now()
     current_date = current_datetime.strftime("%d/%m")
-    current_time = current_datetime.strftime('%H:%M:')
-    return f'{current_date, current_time}'
+    current_time = current_datetime.strftime("%H:%M")
+    return f'{current_date} - {current_time}'
