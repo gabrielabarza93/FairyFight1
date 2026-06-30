@@ -1,6 +1,5 @@
 import pygame
 
-
 # C
 COLOR_GOLD = (220, 194, 120)
 COLOR_BLACK = (0,0,0)
@@ -25,13 +24,16 @@ ENTITY_SPEED = {
     'Level2Bg2': 2,
     'Level2Bg3': 3,
     'Level2Bg4': 4,
+    'Level2Bg5': 5,
+    'Level2Bg6': 6,
+    'Level2Bg7': 6,
     'Player1': 9,
-    'Player1Shot': 1,
+    'Player1Shot': 4,
     'Player2': 9,
-    'Player2Shot': 3,
-    'Enemy1': 3,
+    'Player2Shot': 4,
+    'Enemy1': 1,
     'Enemy1Shot': 5,
-    'Enemy2': 3,
+    'Enemy2': 1,
     'Enemy2Shot': 2,
 }
 
@@ -48,6 +50,9 @@ ENTITY_HEALTH = {
     'Level2Bg2': 999,
     'Level2Bg3': 999,
     'Level2Bg4': 999,
+    'Level2Bg5': 999,
+    'Level2Bg6': 999,
+    'Level2Bg7': 999,
     'Player1': 300,
     'Player1Shot': 1,
     'Player2': 300,
@@ -71,6 +76,9 @@ ENTITY_DAMAGE = {
     'Level2Bg2': 0,
     'Level2Bg3': 0,
     'Level2Bg4': 0,
+    'Level2Bg5': 0,
+    'Level2Bg6': 0,
+    'Level2Bg7': 0,
     'Player1': 1,
     'Player1Shot': 25,
     'Player2': 1,
@@ -94,6 +102,9 @@ ENTITY_SCORE = {
     'Level2Bg2': 0,
     'Level2Bg3': 0,
     'Level2Bg4': 0,
+    'Level2Bg5': 0,
+    'Level2Bg6': 0,
+    'Level2Bg7': 0,
     'Player1': 0,
     'Player1Shot': 0,
     'Player2': 0,
@@ -105,8 +116,8 @@ ENTITY_SCORE = {
 }
 
 ENTITY_SHOT_DELAY = {
-    'Player1': 20,
-    'Player2': 15,
+    'Player1': 10,
+    'Player2': 10,
     'Enemy1': 100,
     'Enemy2': 200,
 }
@@ -127,8 +138,8 @@ PLAYER_KEY_LEFT = {'Player1': pygame.K_LEFT,
                    'Player2': pygame.K_a}
 PLAYER_KEY_RIGHT = {'Player1': pygame.K_RIGHT,
                     'Player2': pygame.K_d}
-PLAYER_KEY_SHOOT = {'Player1': pygame.K_RCTRL,
-                    'Player2': pygame.K_LCTRL}
+PLAYER_KEY_SHOOT = {'Player1': pygame.K_p,
+                    'Player2': pygame.K_h}
 
 # S
 SPAWN_TIME = 4000
@@ -140,3 +151,20 @@ TIMEOUT_LEVEL = 20000  # 20s
 # w
 WIN_WIDTH = 800
 WIN_HEIGHT = 450
+
+# S2
+SCORE_POS = {'Title': (WIN_WIDTH / 2, 50),
+             'EnterName': (WIN_WIDTH / 2, 80),
+             'Label': (WIN_WIDTH / 2, 90),
+             'Name': (WIN_WIDTH / 2, 110),
+             0: (WIN_WIDTH / 2, 110),
+             1: (WIN_WIDTH / 2, 130),
+             2: (WIN_WIDTH / 2, 150),
+             3: (WIN_WIDTH / 2, 170),
+             4: (WIN_WIDTH / 2, 190),
+             5: (WIN_WIDTH / 2, 210),
+             6: (WIN_WIDTH / 2, 230),
+             7: (WIN_WIDTH / 2, 250),
+             8: (WIN_WIDTH / 2, 270),
+             9: (WIN_WIDTH / 2, 290),
+             }

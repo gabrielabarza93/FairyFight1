@@ -11,9 +11,7 @@ from code.PlayerShot import PlayerShot
 class Player(Entity):
     def __init__(self, name: str, position):
         super().__init__(name, position)
-
-    def update(self, ):
-        pass
+        self.shot_delay = ENTITY_SHOT_DELAY[self.name]
 
     def move(self):
         pressed_key = pygame.key.get_pressed()
@@ -26,6 +24,7 @@ class Player(Entity):
         if pressed_key[PLAYER_KEY_RIGHT[self.name]] and self.rect.right < WIN_WIDTH:
             self.rect.centerx += ENTITY_SPEED[self.name]
         pass
+
     def shoot(self):
         self.shot_delay -= 1
         if self.shot_delay == 0:
